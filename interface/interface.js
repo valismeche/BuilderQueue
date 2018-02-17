@@ -27,7 +27,7 @@ define('TWOverflow/Builder/interface', [
             css: '__builder_css_style'
         })
 
-        opener = new FrontButton('Builder', {
+        opener = new FrontButton('Build', {
             classHover: false,
             classBlur: false
         })
