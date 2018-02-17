@@ -39,6 +39,21 @@ define('TWOverflow/Builder', [
         Builder.initialized = true
 
         console.log('Builder initialized!')
+
+        Builder.buildingSequence = [
+            ['timber_camp', 2],
+            ['clay_pit', 2],
+            ['iron_mine', 2],
+            ['farm', 2],
+            ['warehouse', 2],
+            ['timber_camp', 3],
+            ['clay_pit', 3],
+            ['iron_mine', 3],
+            ['warehouse', 3],
+            ['timber_camp', 4],
+            ['clay_pit', 4],
+            ['iron_mine', 4]
+        ]
     }
 
     return Builder

@@ -9,10 +9,16 @@
     <div class="win-main">
         <!-- ABAS -->
         <div class="tabs tabs-bg">
-            <div class="tabs-one-col">
+            <div class="tabs-two-col">
                 <div class="tab" tab="info">
                     <div class="tab-inner">
                         <div><a href="#" class="btn-icon btn-orange"><#= locale("common", "info") #></a></div>
+                    </div>
+                </div>
+
+                <div class="tab" tab="settings">
+                    <div class="tab-inner">
+                        <div><a href="#" class="btn-icon btn-orange"><#= locale("common", "settings") #></a></div>
                     </div>
                 </div>
             </div>
@@ -23,6 +29,14 @@
             <h5 class="twx-section collapse"><#= locale("builder", "info.header") #></h5>
             <div>
                 <p><#= locale("builder", "info.content") #></p>
+            </div>
+        </div>
+
+        <!-- SETTINGS -->
+        <div class="box-paper footer has-footer-upper twOverflow-content-settings">
+            <h5 class="twx-section collapse"><#= locale("builder", "sequence") #></h5>
+            <div>
+                <div class="sequence"></div>
             </div>
         </div>
     </div>

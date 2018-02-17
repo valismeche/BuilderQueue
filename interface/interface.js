@@ -36,6 +36,22 @@ define('TWOverflow/Builder/interface', [
             ui.openWindow()
         })
 
+        var $window = $(ui.$window)
+        var $sequence = $window.find('.sequence')
+
+        Builder.buildingSequence.forEach(function (item) {
+            var $item = document.createElement('div')
+
+            $item.className = 'building'
+            $item.innerHTML = ejs.render('__builder_html_item', {
+                building: item[0],
+                level: item[1],
+                locale: Locale
+            })
+
+            $sequence.append($item)
+        })
+
         return ui
     }
 
