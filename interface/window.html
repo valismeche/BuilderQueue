@@ -6,24 +6,23 @@
         </ul>
     </header>
 
-    <div class="win-main">
-        <!-- ABAS -->
-        <div class="tabs tabs-bg">
-            <div class="tabs-two-col">
-                <div class="tab" tab="info">
-                    <div class="tab-inner">
-                        <div><a href="#" class="btn-icon btn-orange"><#= locale("common", "info") #></a></div>
-                    </div>
+    <div class="tabs tabs-bg">
+        <div class="tabs-two-col">
+            <div class="tab" tab="info">
+                <div class="tab-inner">
+                    <div><a href="#" class="btn-icon btn-orange"><#= locale("common", "info") #></a></div>
                 </div>
+            </div>
 
-                <div class="tab" tab="settings">
-                    <div class="tab-inner">
-                        <div><a href="#" class="btn-icon btn-orange"><#= locale("common", "settings") #></a></div>
-                    </div>
+            <div class="tab" tab="settings">
+                <div class="tab-inner">
+                    <div><a href="#" class="btn-icon btn-orange"><#= locale("common", "settings") #></a></div>
                 </div>
             </div>
         </div>
+    </div>
 
+    <div class="win-main">
         <!-- INFO -->
         <div class="box-paper footer has-footer-upper twOverflow-content-info">
             <h5 class="twx-section collapse"><#= locale("builder", "info.header") #></h5>
@@ -39,7 +38,9 @@
                 <table class="sequence tbl-border-light">
                     <thead>
                         <# for (var building in buildingOrder) { #>
-                            <th><span class="building-icon icon-34x34-building-<#= building #>"></span></th>
+                            <th tooltip="<#= locale("common", building) #>">
+                                <span class="building-icon icon-34x34-building-<#= building #>"></span>
+                            </th>
                         <# } #>
                     </thead>
                     <tbody></tbody>
