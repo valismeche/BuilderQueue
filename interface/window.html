@@ -36,7 +36,14 @@
         <div class="box-paper footer has-footer-upper twOverflow-content-settings">
             <h5 class="twx-section collapse"><#= locale("builder", "sequence") #></h5>
             <div>
-                <div class="sequence"></div>
+                <table class="sequence tbl-border-light">
+                    <thead>
+                        <# for (var building in buildingOrder) { #>
+                            <th><span class="building-icon icon-34x34-building-<#= building #>"></span></th>
+                        <# } #>
+                    </thead>
+                    <tbody></tbody>
+                </table>
             </div>
         </div>
     </div>

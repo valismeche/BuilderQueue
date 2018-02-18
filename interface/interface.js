@@ -17,12 +17,33 @@ define('TWOverflow/Builder/interface', [
     var opener
 
     function BuilderInterface () {
+        var buildingOrder = {
+            headquarter: 0,
+            timber_camp: 1,
+            clay_pit: 2,
+            iron_mine: 3,
+            farm: 4,
+            warehouse: 5,
+            chapel: 6,
+            church: 7,
+            rally_point: 8,
+            barracks: 9,
+            statue: 10,
+            hospital: 11,
+            wall: 12,
+            market: 13,
+            tavern: 14,
+            academy: 15,
+            preceptory: 16
+        }
+
         ui = new Interface('BuilderQueue', {
             activeTab: 'info',
             template: '__builder_html_window',
             replaces: {
                 locale: Locale,
-                version: '__builder_version'
+                version: '__builder_version',
+                buildingOrder: buildingOrder
             },
             css: '__builder_css_style'
         })
@@ -38,18 +59,25 @@ define('TWOverflow/Builder/interface', [
 
         var $window = $(ui.$window)
         var $sequence = $window.find('.sequence')
+        var $sequenceBody = $sequence.find('tbody')
 
         Builder.buildingSequence.forEach(function (item) {
-            var $item = document.createElement('div')
+            var $row = document.createElement('tr')
+            var $cell
+            var buildingIndex = buildingOrder[item[0]]
 
-            $item.className = 'building'
-            $item.innerHTML = ejs.render('__builder_html_item', {
-                building: item[0],
-                level: item[1],
-                locale: Locale
-            })
+            for (var cellIndex = 0; cellIndex < 17; cellIndex++) {
+                $cell = document.createElement('td')
 
-            $sequence.append($item)
+                if (buildingIndex === cellIndex) {
+                    $cell.className = 'level'
+                    $cell.innerHTML = item[1]
+                }
+
+                $row.appendChild($cell)
+            }
+
+            $sequenceBody.append($row)
         })
 
         return ui
