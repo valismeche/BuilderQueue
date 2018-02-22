@@ -1,5 +1,10 @@
 {
     "title": "BuilderQueue",
     "info.header": "Title",
-    "info.content": "Content"
+    "info.content": "Content",
+    "general.disabled": "— Disabled —",
+    "settings": "Settings",
+    "settings.groupVillages": "Build in villages of group",
+    "settings.saved": "Settings saved!",
+    "tooltip.groupVillages": "Automatic builder will only works in villages assigned in the specified group"
 }

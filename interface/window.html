@@ -33,23 +33,46 @@
 
         <!-- SETTINGS -->
         <div class="box-paper footer has-footer-upper twOverflow-content-settings">
-            <h5 class="twx-section collapse"><#= locale("builder", "sequence") #></h5>
-            <div>
+            <form class="settings">
+                <h5 class="twx-section collapse"><#= locale("builder", "settings") #></h5>
+                <table class="tbl-border-light tbl-striped">
+                    <colgroup>
+                        <col width="50%">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="ff-cell-fix"><#= locale("builder", "settings.groupVillages") #></span>
+                                <span class="helper" tooltip="<#= locale("builder", "tooltip.groupVillages") #>">?</span>
+                            </td>
+                            <td>
+                                <select data-setting="groupVillages" class="groupVillages"></select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
                 <table class="sequence tbl-border-light">
                     <thead>
-                        <# for (var building in buildingOrder) { #>
-                            <th tooltip="<#= locale("common", building) #>">
-                                <span class="building-icon icon-34x34-building-<#= building #>"></span>
-                            </th>
-                        <# } #>
+                        <tr>
+                            <# for (var building in buildingOrder) { #>
+                                <th tooltip="<#= locale("common", building) #>">
+                                    <span class="building-icon icon-34x34-building-<#= building #>"></span>
+                                </th>
+                            <# } #>
+                        </tr>
                     </thead>
                     <tbody></tbody>
                 </table>
-            </div>
+            </form>
         </div>
     </div>
     <footer class="win-foot">
         <ul class="list-btn list-center buttons">
+            <li class="twOverflow-button-settings">
+                <a class="btn-orange btn-border save"><#= locale("common", "save") #></a>
+            </li>
             <li>
                 <a class="btn-green btn-border switch"><#= locale("common", "activate") #></a>
             </li>

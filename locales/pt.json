@@ -1,5 +1,10 @@
 {
     "title": "BuilderQueue",
     "info.header": "Título",
-    "info.content": "Conteúdo"
+    "info.content": "Conteúdo",
+    "general.disabled": "— Desativado —",
+    "settings": "Configurações",
+    "settings.groupVillages": "Construir nas aldeias do grupo",
+    "settings.saved": "Configurações salvas!",
+    "tooltip.groupVillages": "A construção automática só ocorrerá nas aldeias que estiverem atribuídas ao grupo especificado."
 }
